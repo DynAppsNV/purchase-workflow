@@ -22,7 +22,7 @@ class TestPurchaseForceInvoiced(TransactionCase):
         cls.invoice_account = cls.env["account.account"].search(
             [
                 ("account_type", "=", "expense"),
-                ("company_id", "=", cls.env.company.id),
+                ("company_ids", "=", cls.env.company.id),
             ],
             limit=1,
         )
